@@ -123,3 +123,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# addition to force redeploy if cert changed
+certExpires: from ansible

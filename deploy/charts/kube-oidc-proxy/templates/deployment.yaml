@@ -130,6 +130,8 @@ spec:
               name: {{ include "kube-oidc-proxy.fullname" . }}-config
               key: oidc.required-claims
         {{ end }}
+        - name: CERT_EXPIRES
+          value: {{ .Values.certExpires }}
         volumeMounts:
           {{- if .Values.oidc.caPEM }}
           - name: kube-oidc-proxy-config
